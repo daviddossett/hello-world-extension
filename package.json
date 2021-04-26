@@ -12,7 +12,8 @@
   "activationEvents": [
     "onCommand:hello-world.helloWorld",
     "onCommand:hello-world.goodbyeWorld",
-    "onCommand:hello-world.commentCurrentLine"
+    "onCommand:hello-world.commentCurrentLine",
+    "onCommand:hello-world.openDialog"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -30,6 +31,10 @@
       {
         "command": "hello-world.commentCurrentLine",
         "title": "Comment Current Line"
+      },
+      {
+        "command": "hello-world.openDialog",
+        "title": "Open dialog"
       }
     ]
   },

@@ -13,7 +13,11 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.commands.executeCommand('editor.action.addCommentLine');
 	})
 
-	context.subscriptions.push(hello, goodbye, commentCurrentLine);
+	let openDialog = vscode.commands.registerCommand('hello-world.openDialog', () => {
+		vscode.window.showOpenDialog();
+	})
+
+	context.subscriptions.push(hello, goodbye, commentCurrentLine, openDialog);
 }
 
 export function deactivate() {}
