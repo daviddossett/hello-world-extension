@@ -9,8 +9,11 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('Goodbye!');
 	});
 
-	context.subscriptions.push(hello, goodbye);
+	let commentCurrentLine = vscode.commands.registerCommand('hello-world.commentCurrentLine', () => {
+		vscode.commands.executeCommand('editor.action.addCommentLine');
+	})
+
+	context.subscriptions.push(hello, goodbye, commentCurrentLine);
 }
 
-// this method is called when your extension is deactivated
 export function deactivate() {}

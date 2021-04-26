@@ -11,18 +11,25 @@
   ],
   "activationEvents": [
     "onCommand:hello-world.helloWorld",
-    "onCommand:hello-world.goodbyeWorld"
+    "onCommand:hello-world.goodbyeWorld",
+    "onCommand:hello-world.commentCurrentLine"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "hello-world.helloWorld",
-        "title": "Hello World"
+        "title": "Hello World",
+        "category": "Hello"
       },
       {
         "command": "hello-world.goodbyeWorld",
-        "title": "Goodbye World"
+        "title": "Goodbye World",
+        "category": "Hello"
+      },
+      {
+        "command": "hello-world.commentCurrentLine",
+        "title": "Comment Current Line"
       }
     ]
   },

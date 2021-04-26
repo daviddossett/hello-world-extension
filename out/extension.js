@@ -9,10 +9,12 @@ function activate(context) {
     let goodbye = vscode.commands.registerCommand('hello-world.goodbyeWorld', () => {
         vscode.window.showInformationMessage('Goodbye!');
     });
-    context.subscriptions.push(hello, goodbye);
+    let commentCurrentLine = vscode.commands.registerCommand('hello-world.commentCurrentLine', () => {
+        vscode.commands.executeCommand('editor.action.addCommentLine');
+    });
+    context.subscriptions.push(hello, goodbye, commentCurrentLine);
 }
 exports.activate = activate;
-// this method is called when your extension is deactivated
 function deactivate() { }
 exports.deactivate = deactivate;
 //# sourceMappingURL=extension.js.map
