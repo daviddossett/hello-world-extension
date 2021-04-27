@@ -13,7 +13,8 @@
     "onCommand:hello-world.helloWorld",
     "onCommand:hello-world.goodbyeWorld",
     "onCommand:hello-world.commentCurrentLine",
-    "onCommand:hello-world.openDialog"
+    "onCommand:hello-world.openDialog",
+    "onCommand:hello-world.setStatus"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -35,6 +36,10 @@
       {
         "command": "hello-world.openDialog",
         "title": "Open dialog"
+      },
+      {
+        "command": "hello-world.setStatus",
+        "title": "Set status bar message"
       }
     ]
   },
