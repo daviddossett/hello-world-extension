@@ -1,1 +1,1 @@
-A simple hello world VS Code extension for learning purposes
+A simple VS Code extension for learning purposes
